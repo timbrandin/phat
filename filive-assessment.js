@@ -1,17 +1,10 @@
-Assessments = new Mongo.Collection("assessments");
-if (Meteor.isServer){
-  var deckId = "introvert-extrovert";
-  Traitify.createAssessment(deckId, function(assessment){
-    //console.log(assessment);
-  });
-}
 if (Meteor.isClient) {
   Template.assessment.onRendered(function(){
     $(document).ready(function(){
       $(".buddy").on("swiperight",function(){
         $(this).addClass('rotate-left').delay(700).fadeOut(1);
         $('.buddy').find('.status').remove();
-        
+
         $(this).append('<div class="status like">Like!</div>');
           if ( $(this).is(':last-child') ) {
             $('.buddy:nth-child(1)').removeClass ('rotate-left rotate-right').fadeIn(300);
@@ -39,8 +32,8 @@ if (Meteor.isClient) {
     Traitify.setPublicKey("t5sj1md17qgspe8jkdgkc0otk");
     Traitify.setHost("api-sandbox.traitify.com");
     Traitify.setVersion("v1");
-    
-    
+
+
     /*traitify = Traitify.ui.load(assessmentId, ".slide-deck", {
         results: {target: ".results"},
         personalityTypes: {target: ".personality-types"},
