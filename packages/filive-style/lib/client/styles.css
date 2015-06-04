@@ -1,0 +1,180 @@
+body {
+  font-family: chaparral-pro, sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  padding: 16px;
+  padding-bottom: 66px;
+}
+
+li {
+  margin-bottom: 16px;
+}
+
+li:after {
+  content: '';
+  display: block;
+  clear: left;
+}
+
+li img {
+  float: left;
+  border-radius: 50%;
+  width: 40px;
+  margin-right: 8px;
+}
+
+li .message-header {
+  font-weight: bold;
+}
+
+li .time {
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+form {
+  width: 100%;
+  box-sizing: border-box;
+  position: fixed;
+  background: #000;
+  bottom: 0;
+  padding: 14px 16px 8px;
+}
+
+textarea {
+  background: #4D4D4D;
+  padding: 8px 8px 6px;
+  width: 100%;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 1.5;
+  resize: none !important;
+  outline: none;
+  -webkit-appearance: none;
+  box-shadow: none !important;
+  font-family: chaparral-pro, sans-serif;
+}
+
+textarea:focus {
+  background: white;
+}
+
+#login-buttons {
+  position: fixed;
+  top: 0;
+  display: block;
+  width: 100%;
+}
+
+.accounts-dialog * {
+  font-family: chaparral-pro,sans-serif;
+}
+
+.accounts-dialog .additional-link {
+  font-size: 14px;
+}
+
+.login-link-and-dropdown-list {
+  background: #00ADEF;
+  color: white;
+  display: inline-block;
+  padding: 16px;
+  text-transform: uppercase;
+  font-size: 1.33333rem;
+  line-height: 1.2;
+  float: right;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#login-buttons.login-buttons-dropdown-align-right #login-dropdown-list {
+  right: 12px;
+  top: 8px;
+  padding: 30px 20px 20px;
+  border: none;
+  box-shadow: none;
+  height: 1000px;
+  background: black;
+  color: white;
+  border-radius: 0;
+}
+
+#login-dropdown-list .login-button {
+  margin-bottom: 16px;
+  float: none;
+}
+
+#login-dropdown-list .login-button {
+  text-align: left;
+  font-family: VanCondensedPro,sans-serif;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  font-weight: 300;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+#login-dropdown-list .login-button-form-submit {
+  font-size: 1.5rem;
+}
+
+#login-dropdown-list a,
+#login-dropdown-list .login-button:hover {
+  background: none;
+  color: #00ADEF;
+}
+
+#login-dropdown-list label {
+  font-family: VanCondensedPro,sans-serif;
+  font-size: 14px;
+}
+
+#login-dropdown-list .login-close-text {
+  color: transparent;
+  text-indent: -9999px;
+  position: absolute;
+  z-index: 1;
+  top: 8px;
+  right: 8px;
+  padding: 12px;
+}
+
+#login-dropdown-list .login-close-text:before {
+  content: '';
+  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg"><path fill="white" d="M1.772 1.296c-.41-.447-1.074-.447-1.483 0-.409.448-.409 1.173 0 1.62l4.178 4.563-4.178 4.564c-.409.447-.409 1.173 0 1.62.205.224.474.335.742.335.269 0 .537-.111.742-.335l4.918-5.373c.196-.215.307-.507.307-.811 0-.304-.11-.594-.307-.809l-4.919-5.374zm8.42 12.33c.41.447 1.074.447 1.483 0 .409-.448.409-1.173 0-1.62l-4.178-4.563 4.178-4.564c.409-.447.409-1.173 0-1.62-.205-.224-.474-.335-.742-.335-.269 0-.537.111-.742.335l-4.918 5.373c-.196.215-.307.507-.307.811 0 .304.11.594.307.809l4.919 5.374z"></path></svg>') no-repeat;
+  width: 15px;
+  height: 17px;
+  display: block;
+}
+
+#login-dropdown-list .login-close-text:hover:before {
+  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg"><path fill="#00ADEF" d="M1.772 1.296c-.41-.447-1.074-.447-1.483 0-.409.448-.409 1.173 0 1.62l4.178 4.563-4.178 4.564c-.409.447-.409 1.173 0 1.62.205.224.474.335.742.335.269 0 .537-.111.742-.335l4.918-5.373c.196-.215.307-.507.307-.811 0-.304-.11-.594-.307-.809l-4.919-5.374zm8.42 12.33c.41.447 1.074.447 1.483 0 .409-.448.409-1.173 0-1.62l-4.178-4.563 4.178-4.564c.409-.447.409-1.173 0-1.62-.205-.224-.474-.335-.742-.335-.269 0-.537.111-.742.335l-4.918 5.373c-.196.215-.307.507-.307.811 0 .304.11.594.307.809l4.919 5.374z"></path></svg>') no-repeat;
+}
+
+
+#login-dropdown-list input[type="text"],
+#login-dropdown-list input[type="email"],
+#login-dropdown-list input[type="password"] {
+  border: none;
+  border-radius: 0;
+  padding: 8px;
+  color: black;
+  margin-bottom: 8px;
+}
