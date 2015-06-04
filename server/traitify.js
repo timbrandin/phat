@@ -12,10 +12,25 @@ Meteor.methods({
     Traitify.setVersion("v1");
     Traitify.setPrivateKey("ooo27me7jd8p9p4p0hf7d66tld");
 
-    Traitify.createAssessment('304d0392-4a08-4ef6-a996-224324a9f6f8', function(assessment) {
+    Traitify.createAssessment('introvert-extrovert', function(assessment) {
       fut.return(assessment);
     });
 
+    return fut.wait();
+  },
+  getSlides: function(assessment_id) {
+    var fut = new Future();
+    
+    Traitify.setHost("api-sandbox.traitify.com");
+
+    Traitify.setVersion("v1");
+    Traitify.setPrivateKey("ooo27me7jd8p9p4p0hf7d66tld");
+   
+    Traitify.getSlides("76db9f07-6fd5-4b86-b793-88bd857b2824", function(slides) {
+      fut.return(slides);
+      console.log(slides);
+    });
+    
     return fut.wait();
   }
 });
