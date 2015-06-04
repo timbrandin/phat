@@ -13,3 +13,4 @@ accounts-ui
 filive:style
 iron:router
 jquery
+traitify:api
