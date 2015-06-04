@@ -24,8 +24,7 @@ Package.onUse(function(api) {
     'momentjs:moment@2.10.3',
     'templating',
     'tmeasday:gravatar@0.0.4',
-    'aldeed:template-extension@3.4.3',
-    'brentjanderson:buzz@1.1.9'
+    'aldeed:template-extension@3.4.3'
   ];
 
   api.use(packages);
