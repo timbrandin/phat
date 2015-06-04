@@ -1,4 +1,10 @@
 Assessments = new Mongo.Collection("assessments");
+if (Meteor.isServer){
+  var deckId = "introvert-extrovert";
+  Traitify.createAssessment(deckId, function(assessment){
+    //console.log(assessment);
+  });
+}
 if (Meteor.isClient) {
   Template.assessment.onRendered(function(){
     $(document).ready(function(){
@@ -33,13 +39,7 @@ if (Meteor.isClient) {
     Traitify.setPublicKey("t5sj1md17qgspe8jkdgkc0otk");
     Traitify.setHost("api-sandbox.traitify.com");
     Traitify.setVersion("v1");
-    var assessmentId = "affa331e-cecb-4d9d-bc3e-d03d7230710d";
     
-    var deckId = "introvert-extrovert";
-    traitify.createAssessment(deckId, function(assessment){
-      // Use assessment here.
-      console.log(assessment);
-    });
     
     /*traitify = Traitify.ui.load(assessmentId, ".slide-deck", {
         results: {target: ".results"},
