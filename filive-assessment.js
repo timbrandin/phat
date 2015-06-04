@@ -1,11 +1,12 @@
+Assessments = new Mongo.Collection("assessments");
 if (Meteor.isClient) {
-	Template.assessment.onRendered(function(){
-		$(document).ready(function(){
-			$(".buddy").on("swiperight",function(){
-				$(this).addClass('rotate-left').delay(700).fadeOut(1);
-				$('.buddy').find('.status').remove();
-				
-				$(this).append('<div class="status like">Like!</div>');
+  Template.assessment.onRendered(function(){
+    $(document).ready(function(){
+      $(".buddy").on("swiperight",function(){
+        $(this).addClass('rotate-left').delay(700).fadeOut(1);
+        $('.buddy').find('.status').remove();
+        
+        $(this).append('<div class="status like">Like!</div>');
           if ( $(this).is(':last-child') ) {
             $('.buddy:nth-child(1)').removeClass ('rotate-left rotate-right').fadeIn(300);
            } else {
@@ -29,15 +30,21 @@ if (Meteor.isClient) {
     });
 
     // Adding assessments
-    Traitify.setPublicKey("t5sj1md17qgspe8jkdgkc0otk"); // Example Public Key
-    Traitify.setHost("api-sandbox.traitify.com"); // Example host url (Defaults to api.traitify.com)
-    Traitify.setVersion("v1"); // Example Version
-    var assessmentId = "affa331e-cecb-4d9d-bc3e-d03d7230710d"; // Example Assessment id
-
-    traitify = Traitify.ui.load(assessmentId, ".slide-deck", {
+    Traitify.setPublicKey("t5sj1md17qgspe8jkdgkc0otk");
+    Traitify.setHost("api-sandbox.traitify.com");
+    Traitify.setVersion("v1");
+    var assessmentId = "affa331e-cecb-4d9d-bc3e-d03d7230710d";
+    
+    var deckId = "introvert-extrovert";
+    traitify.createAssessment(deckId, function(assessment){
+      // Use assessment here.
+      console.log(assessment);
+    });
+    
+    /*traitify = Traitify.ui.load(assessmentId, ".slide-deck", {
         results: {target: ".results"},
         personalityTypes: {target: ".personality-types"},
         personalityTraits: {target: ".personality-traits"}
-    }); // Example selector for widget target
+    }); // Example selector for widget target*/
   });
 }
