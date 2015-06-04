@@ -11,3 +11,4 @@ momentjs:moment
 accounts-password
 accounts-ui
 filive:style
+iron:router
