@@ -28,7 +28,6 @@ Meteor.methods({
    
     Traitify.getSlides("76db9f07-6fd5-4b86-b793-88bd857b2824", function(slides) {
       fut.return(slides);
-      console.log(slides);
     });
     
     return fut.wait();

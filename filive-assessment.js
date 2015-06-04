@@ -30,28 +30,6 @@ if (Meteor.isClient) {
        
       }
     })
-     
-      
-      function setSlideListener(){
-        $(".buddy").on("swiperight",function(){
-          var slide_id = $(this).attr('data-id');
-          var slide_position = $(this).attr('data-position');
-
-          console.log('ME - ' + slide_id);
-          $(this).addClass('rotate-left').delay(700).fadeOut(1);
-          $('.buddy').find('.status').remove();
-
-          $(this).append('<div class="status like">ME!</div>');
-            if ( $(this).is(':last-child') ) {
-              $('.buddy:nth-child(1)').removeClass ('rotate-left rotate-right').fadeIn(300);
-             } else {
-                $(this).next().removeClass('rotate-left rotate-right').fadeIn(400);
-             }
-          });
-
-        
-         
-      }
   });
   
   Template.assessment.helpers({
